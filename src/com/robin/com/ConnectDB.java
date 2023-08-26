@@ -6,8 +6,8 @@ import java.sql.DriverManager;
 public class ConnectDB {
 
 	public static void main(String[] args) {
-		ConnectDB obj_DB_Connection = new ConnectDB();
-		System.out.println(obj_DB_Connection.get_connection());
+		ConnectDB obj_ConnectDB = new ConnectDB();
+		System.out.println(obj_ConnectDB.get_connection());
 	}
 
 	public Connection get_connection() {
