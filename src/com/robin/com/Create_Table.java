@@ -11,7 +11,7 @@ public class Create_Table {
 		connection = obj_ConnectDB.get_connection();
 
 		try {
-			String query = "create table employee(id int(10) not null auto_increment, name varchar(45), age int(10), primary key(id))";
+			String query = "create table employee(sl_no SERIAL primary key, name varchar(200), address varchar(200))";
 			statement = connection.createStatement();
 			statement.executeUpdate(query);
 			System.out.println("Table created successfully");
