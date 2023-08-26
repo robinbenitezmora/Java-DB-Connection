@@ -34,4 +34,7 @@ public class ConnectDB {
 		}
 		return connection;
 	}
+
+	public void read_database() {
+	}
 }
