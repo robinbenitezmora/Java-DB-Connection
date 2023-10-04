@@ -11,7 +11,7 @@ public class Edit_value {
 		connection = obj_ConnectDB.get_connection();
 
 		try {
-			String query = "update employee set name='Jhonson' where sl_no='3'";
+			String query = "update employee set name='Laurent' where sl_no='3'";
 			statement = connection.prepareStatement(query);
 			statement.executeUpdate();
 			System.out.println("Update complete");
