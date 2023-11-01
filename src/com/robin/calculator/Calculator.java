@@ -453,3 +453,278 @@ public class Calculator {
       }
     });
     window.add(btnSin);
+
+    btnCos = new JButton("cos");
+    btnCos.setBounds(10, 490, 90, 50);
+    btnCos.setFont(new Font("Arial", Font.PLAIN, 20));
+    btnCos.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    btnCos.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        if (go) {
+          val = Double.parseDouble(inText.getText());
+          val = Math.cos(val);
+          inText.setText("" + val);
+          go = true;
+        } else {
+          String str = inText.getText();
+          if (str.length() > 0) {
+            str = str.substring(0, str.length() - 1);
+            val = Double.parseDouble(str);
+            val = Math.cos(val);
+            inText.setText("" + val);
+          }
+        }
+      }
+    });
+    window.add(btnCos);
+
+    btnTan = new JButton("tan");
+    btnTan.setBounds(110, 490, 90, 50);
+    btnTan.setFont(new Font("Arial", Font.PLAIN, 20));
+    btnTan.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    btnTan.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        if (go) {
+          val = Double.parseDouble(inText.getText());
+          val = Math.tan(val);
+          inText.setText("" + val);
+          go = true;
+        } else {
+          String str = inText.getText();
+          if (str.length() > 0) {
+            str = str.substring(0, str.length() - 1);
+            val = Double.parseDouble(str);
+            val = Math.tan(val);
+            inText.setText("" + val);
+          }
+        }
+      }
+    });
+    window.add(btnTan);
+
+    btnLog = new JButton("log");
+    btnLog.setBounds(210, 490, 90, 50);
+    btnLog.setFont(new Font("Arial", Font.PLAIN, 20));
+    btnLog.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    btnLog.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        if (go) {
+          val = Double.parseDouble(inText.getText());
+          val = Math.log10(val);
+          inText.setText("" + val);
+          go = true;
+        } else {
+          String str = inText.getText();
+          if (str.length() > 0) {
+            str = str.substring(0, str.length() - 1);
+            val = Double.parseDouble(str);
+            val = Math.log10(val);
+            inText.setText("" + val);
+          }
+        }
+      }
+    });
+    window.add(btnLog);
+
+    btnLn = new JButton("ln");
+    btnLn.setBounds(310, 490, 75, 50);
+    btnLn.setFont(new Font("Arial", Font.PLAIN, 20));
+    btnLn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    btnLn.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        if (go) {
+          val = Double.parseDouble(inText.getText());
+          val = Math.log(val);
+          inText.setText("" + val);
+          go = true;
+        } else {
+          String str = inText.getText();
+          if (str.length() > 0) {
+            str = str.substring(0, str.length() - 1);
+            val = Double.parseDouble(str);
+            val = Math.log(val);
+            inText.setText("" + val);
+          }
+        }
+      }
+    });
+    window.add(btnLn);
+
+    btnPi = new JButton("π");
+    btnPi.setBounds(10, 550, 90, 50);
+    btnPi.setFont(new Font("Arial", Font.PLAIN, 20));
+    btnPi.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    btnPi.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        inText.setText(inText.getText() + "3.1415926535897932384626433832795");
+      }
+    });
+    window.add(btnPi);
+
+    btnE = new JButton("e");
+    btnE.setBounds(110, 550, 90, 50);
+    btnE.setFont(new Font("Arial", Font.PLAIN, 20));
+    btnE.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    btnE.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        inText.setText(inText.getText() + "2.7182818284590452353602874713527");
+      }
+    });
+    window.add(btnE);
+
+    btnInv = new JButton("Inv");
+    btnInv.setBounds(210, 550, 90, 50);
+    btnInv.setFont(new Font("Arial", Font.PLAIN, 20));
+    btnInv.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    btnInv.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        if (bool) {
+          btnSqrt.setText("√");
+          btnPow.setText("^");
+          btnFact.setText("!");
+          btnSin.setText("sin");
+          btnCos.setText("cos");
+          btnTan.setText("tan");
+          btnLog.setText("log");
+          btnLn.setText("ln");
+          btnPi.setText("π");
+          btnE.setText("e");
+          btnInv.setText("Inv");
+          bool = false;
+        } else {
+          btnSqrt.setText("x²");
+          btnPow.setText("x^y");
+          btnFact.setText("n!");
+          btnSin.setText("sin⁻¹");
+          btnCos.setText("cos⁻¹");
+          btnTan.setText("tan⁻¹");
+          btnLog.setText("10^x");
+          btnLn.setText("e^x");
+          btnPi.setText("2π");
+          btnE.setText("e^π");
+          btnInv.setText("Inv");
+          bool = true;
+        }
+      }
+    });
+    window.add(btnInv);
+
+    btnParOpen = new JButton("(");
+    btnParOpen.setBounds(310, 550, 75, 50);
+    btnParOpen.setFont(new Font("Arial", Font.PLAIN, 20));
+    btnParOpen.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    btnParOpen.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        inText.setText(inText.getText() + "(");
+      }
+    });
+    window.add(btnParOpen);
+
+    btnParClose = new JButton(")");
+    btnParClose.setBounds(310, 490, 75, 50);
+    btnParClose.setFont(new Font("Arial", Font.PLAIN, 20));
+    btnParClose.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    btnParClose.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        inText.setText(inText.getText() + ")");
+      }
+    });
+    window.add(btnParClose);
+
+    choixColor = new JButton("Choix de couleur");
+    choixColor.setBounds(10, 610, 375, 50);
+    choixColor.setFont(new Font("Arial", Font.PLAIN, 20));
+    choixColor.setCursor(new Cursor(Cursor.HAND_CURSOR));
+    choixColor.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        Color color = JColorChooser.showDialog(null, "Choisissez une couleur", Color.WHITE);
+        inText.setBackground(color);
+        inText.setForeground(color);
+        affichageCalc.setBackground(color);
+        affichageCalc.setForeground(color);
+        btnC.setBackground(color);
+        btnC.setForeground(color);
+        btnCE.setBackground(color);
+        btnCE.setForeground(color);
+        btnBack.setBackground(color);
+        btnBack.setForeground(color);
+        btnDiv.setBackground(color);
+        btnDiv.setForeground(color);
+        btn7.setBackground(color);
+        btn7.setForeground(color);
+        btn8.setBackground(color);
+        btn8.setForeground(color);
+        btn9.setBackground(color);
+        btn9.setForeground(color);
+        btnMul.setBackground(color);
+        btnMul.setForeground(color);
+        btn4.setBackground(color);
+        btn4.setForeground(color);
+        btn5.setBackground(color);
+        btn5.setForeground(color);
+        btn6.setBackground(color);
+        btn6.setForeground(color);
+        btnSub.setBackground(color);
+        btnSub.setForeground(color);
+        btn1.setBackground(color);
+        btn1.setForeground(color);
+        btn2.setBackground(color);
+        btn2.setForeground(color);
+        btn3.setBackground(color);
+        btn3.setForeground(color);
+        btnAdd.setBackground(color);
+        btnAdd.setForeground(color);
+        btn0.setBackground(color);
+        btn0.setForeground(color);
+        btnDot.setBackground(color);
+        btnDot.setForeground(color);
+        btnEqual.setBackground(color);
+        btnEqual.setForeground(color);
+        btnMod.setBackground(color);
+        btnMod.setForeground(color);
+        btnSqrt.setBackground(color);
+        btnSqrt.setForeground(color);
+        btnPow.setBackground(color);
+        btnPow.setForeground(color);
+        btnFact.setBackground(color);
+        btnFact.setForeground(color);
+        btnSin.setBackground(color);
+        btnSin.setForeground(color);
+        btnCos.setBackground(color);
+        btnCos.setForeground(color);
+        btnTan.setBackground(color);
+        btnTan.setForeground(color);
+        btnLog.setBackground(color);
+        btnLog.setForeground(color);
+        btnLn.setBackground(color);
+        btnLn.setForeground(color);
+        btnPi.setBackground(color);
+        btnPi.setForeground(color);
+        btnE.setBackground(color);
+        btnE.setForeground(color);
+        btnInv.setBackground(color);
+        btnInv.setForeground(color);
+        btnParOpen.setBackground(color);
+        btnParOpen.setForeground(color);
+        btnParClose.setBackground(color);
+        btnParClose.setForeground(color);
+        choixColor.setBackground(color);
+        choixColor.setForeground(color);
+      }
+    });
+    window.add(choixColor);
+
+    window.setVisible(true);
+  }
+
+  private double fact(double n) {
+    if (n == 0)
+      return 1;
+    else
+      return n * fact(n - 1);
+  }
+
+  public static void main(String[] args) {
+    new Calculator();
+  }
+}
