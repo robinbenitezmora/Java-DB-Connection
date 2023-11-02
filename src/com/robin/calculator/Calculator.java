@@ -22,7 +22,7 @@ public class Calculator {
 
   private Calculator() {
     window = new JFrame("Calculator");
-    window.setSize(400, 600);
+    window.setSize(415, 720);
     window.setLocationRelativeTo(null);
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     window.setResizable(false);
